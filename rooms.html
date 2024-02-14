@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Hotel Reservation System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="containers">
+      <nav class="nav">
+        <div class="nav-container">
+          <div class="logo">
+            <img src="media/figma/download 1.png" alt="" />
+          </div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="index.html" class="text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="rooms.html" class="text-decoration-none">Rooms</a>
+              </li>
+              <li>
+                <a href="reservations.html" class="text-decoration-none"
+                  >Reservations</a
+                >
+              </li>
+              <li>
+                <a href="index.html" class="text-decoration-none">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="profile">
+            <ul>
+              <li class="menu-btn" style="cursor: pointer" onclick="openNav()">
+                <img
+                  src="media/figma/menu-svgrepo-com.svg"
+                  width="30px"
+                  alt=""
+                />
+              </li>
+              <li id="profileName"></li>
+              <li id="signOutBtn" class="profileIcon">
+                <a href="" class="text-decoration-none"
+                  ><img
+                    src="media/figma/sign-out-left-svgrepo-com.svg"
+                    width="30px"
+                    alt=""
+                /></a>
+              </li>
+              <li class="profileIcon">
+                <a href="profile.html" class="text-decoration-none" id=""
+                  ><img
+                    src="media/figma/profile-svgrepo-com.svg"
+                    width="30px"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <style>
+        nav {
+          border-bottom: 1px solid rgb(208, 195, 195);
+        }
+        .section-title {
+          padding-top: 30px;
+        }
+        .section-title h2 {
+          color: #957554;
+        }
+      </style>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="index.html" class="text-decoration-none">Home</a>
+
+          <a href="rooms.html" class="text-decoration-none">Rooms</a>
+
+          <a href="reservations.html" class="text-decoration-none"
+            >Reservations</a
+          >
+
+          <a href="contact.html" class="text-decoration-none">Contact Us</a>
+        </div>
+      </div>
+
+      <section class="rooms">
+        <div class="section-title">
+          <h2>All Rooms</h2>
+        </div>
+        <div class="rooms-center" id="rooms"></div>
+      </section>
+      <!-- modal -->
+      <div
+        class="modal fade"
+        id="roomModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="roomModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="roomModalLabel">Room Details</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="roomModalBody">
+              <!-- Room details and reservation form will be dynamically added here -->
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="confirmReservationBtn"
+              >
+                Confirm Reservation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New modal for reservation success message -->
+      <div class="modal" id="successModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Congratulations!</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="successModalBody">
+              <!-- Content of the success message goes here -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <div class="footer-logo">
+              <img src="media/figma/image 1.png" alt="" />
+            </div>
+            <div class="footer-address">
+              <span class="text-1">Bon Hotels Head Office</span><br />
+              <span class="footer-phone">+27 434 344 432</span><br />
+              <span class="footer-email">info@bonhotels.com</span>
+            </div>
+          </div>
+          <div class="footer-center">
+            <li>Our Hotels</li>
+            <li>Our Conferencing</li>
+            <li>Our Company</li>
+            <li>Hotel Design</li>
+            <li>Careers</li>
+          </div>
+          <div class="footer-right">
+            <p class="subscribe-text">Subscribe for Offers</p>
+            <div class="subscribe-input">
+              <input type="text" placeholder="Email Address" />
+            </div>
+            <div class="subscribe-button"><button>Subscribe Now</button></div>
+          </div>
+        </div>
+      </footer>
+      <style>
+        footer {
+          padding-top: 50px;
+        }
+      </style>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+    </script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script type="module" src="./js/rooms.js"></script>
+  </body>
+</html>

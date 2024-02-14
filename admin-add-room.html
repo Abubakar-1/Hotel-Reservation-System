@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Room | Hotel Reservation System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><h2>Admin Dashboard</h2></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="admin-reservation-list.html"
+                >Reservations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin-rooms.html">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin-customers-list.html">Customers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-bell"></i> Notifications</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Profile
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="container mt-5">
+      <!-- Add Room Form -->
+      <h3>Add Room</h3>
+      <form id="addRoomForm">
+        <div class="mb-3">
+          <label for="roomName" class="form-label">Room Name</label>
+          <input type="text" class="form-control" id="roomName" required />
+        </div>
+        <div class="mb-3">
+          <label for="roomType" class="form-label">Room Type</label>
+          <select class="form-select" id="roomType" required>
+            <option value="Standard">Standard Room</option>
+            <option value="Seluxe">Deluxe Room</option>
+            <option value="Suite">Suite</option>
+            <option value="Premium">Premium</option>
+            <option value="Art Deco">Art Deco</option>
+            <option value="Vintage">Vintage</option>
+            <option value="Penthouse">Penthouse</option>
+            <option value="Economy">Economy</option>
+            <option value="Business">Business</option>
+            <option value="Family">Family</option>
+            <option value="Executive">Executive</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="roomStatus" class="form-label">Room Availability</label>
+          <select class="form-select" id="roomStatus" required>
+            <option value="Not Reserved">Available</option>
+            <option value="Reserved">Not Available</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="roomDescription" class="form-label"
+            >Room Description</label
+          >
+          <textarea
+            class="form-control"
+            id="roomDescription"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="roomPrice" class="form-label"
+            >Room Price per Night ($)</label
+          >
+          <input type="number" class="form-control" id="roomPrice" required />
+        </div>
+        <div class="mb-3">
+          <label for="roomImage" class="form-label">Room Image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="roomImage"
+            accept="image/*"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitAddRoomBtn">
+          Add Room
+        </button>
+      </form>
+    </section>
+
+    <footer class="footer">Footer</footer>
+
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"
+    ></script>
+    <script
+      type="module"
+      src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script type="module" src="./js/admin.js"></script>
+  </body>
+</html>
