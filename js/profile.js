@@ -63,3 +63,18 @@ onAuthStateChanged(auth, async (user) => {
     console.log("No user is signed in");
   }
 });
+
+const signOutBtn = document.getElementById("signOutBtn");
+if (signOutBtn) {
+  signOutBtn.addEventListener("click", () => {
+    // Sign out the user
+    signOut(auth)
+      .then(() => {
+        // Redirect to the login page or handle it based on your app flow
+        window.location.href = "index.html";
+      })
+      .catch((error) => {
+        console.error("Error signing out:", error);
+      });
+  });
+}
