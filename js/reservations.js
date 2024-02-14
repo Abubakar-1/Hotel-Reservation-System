@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       signOut(auth)
         .then(() => {
           // Redirect to the login page or handle it based on your app flow
-          window.location.href = "login.html";
+          window.location.href = "index.html";
         })
         .catch((error) => {
           console.error("Error signing out:", error);

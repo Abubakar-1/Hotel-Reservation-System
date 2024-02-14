@@ -119,8 +119,8 @@ function checkUserStatus(email) {
   getDocs(userQuery)
     .then((querySnapshot) => {
       if (!querySnapshot.empty) {
-        // Redirect regular user to index.html
-        window.location.href = "index.html";
+        // Redirect regular user to main.html
+        window.location.href = "main.html";
       } else {
         // Show Toastify message indicating user is not registered
         showToast("You are not registered. Please sign up to continue.", "red");
@@ -173,7 +173,7 @@ function signupWithEmailAndPassword(email, password, fullName, phoneNumber) {
     })
     .then(() => {
       // Redirect to customer home page (you need to define the customer home page)
-      window.location.href = "index.html";
+      window.location.href = "main.html";
     })
     .catch((error) => {
       const errorCode = error.code;

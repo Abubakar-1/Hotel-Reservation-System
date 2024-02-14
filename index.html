@@ -1,255 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Hotel Reservation System</title>
+    <title>Webleb</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
+      href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
-    <div class="containers">
-      <nav class="nav">
-        <div class="nav-container">
-          <div class="logo">
-            <img src="media/figma/download 1.png" alt="" />
-          </div>
-          <div class="menu">
-            <ul>
-              <li>
-                <a href="index.html" class="text-decoration-none">Home</a>
-              </li>
-              <li>
-                <a href="rooms.html" class="text-decoration-none">Rooms</a>
-              </li>
-              <li>
-                <a href="reservations.html" class="text-decoration-none"
-                  >Reservations</a
-                >
-              </li>
-              <li>
-                <a href="index.html" class="text-decoration-none">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="profile">
-            <ul>
-              <li class="menu-btn" style="cursor: pointer" onclick="openNav()">
-                <img
-                  src="media/figma/menu-svgrepo-com.svg"
-                  width="30px"
-                  alt=""
-                />
-              </li>
-              <li id="profileName"></li>
-              <li id="signOutBtn" class="profileIcon">
-                <a href="" class="text-decoration-none"
-                  ><img
-                    src="media/figma/sign-out-left-svgrepo-com.svg"
-                    width="30px"
-                    alt=""
-                /></a>
-              </li>
-              <li class="profileIcon">
-                <a href="profile.html" class="text-decoration-none" id=""
-                  ><img
-                    src="media/figma/profile-svgrepo-com.svg"
-                    width="30px"
-                    alt=""
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-          >&times;</a
-        >
-        <div class="overlay-content">
-          <a href="index.html" class="text-decoration-none">Home</a>
-
-          <a href="rooms.html" class="text-decoration-none">Rooms</a>
-
-          <a href="reservations.html" class="text-decoration-none"
-            >Reservations</a
-          >
-
-          <a href="contact.html" class="text-decoration-none">Contact Us</a>
-        </div>
-      </div>
-
-      <section>
-        <div class="banner">
-          <img src="media/figma/hDbCjHNdF48.png" alt="" />
-          <div class="banner-details">
-            <h1>WELCOME TO BRIGHTER SUITES</h1>
-            <p>Good people. Good thinking. Good feeling</p>
-            <button>EXPLORE</button>
-          </div>
-        </div>
-
-        <div class="facilities">
-          <h1>Facilities</h1>
-          <div class="facility-items">
-            <div class="kitchen">
-              <div class="icon">
-                <img
-                  src="media/figma/kitchen-cabinets-svgrepo-com.svg"
-                  alt=""
-                />
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="section">
+      <div class="container">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <h6 class="mb-0 pb-3">
+                <span>Log In </span><span>Sign Up</span>
+              </h6>
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="reg-log"
+                name="reg-log"
+              />
+              <label for="reg-log"></label>
+              <div class="card-3d-wrap mx-auto">
+                <div class="card-3d-wrapper">
+                  <div class="card-front">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">Log In</h4>
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-style"
+                            placeholder="Email"
+                            id="email"
+                          />
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="password"
+                            class="form-style"
+                            placeholder="Password"
+                            id="password"
+                          />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <button class="btn mt-4" id="loginBtn">Login</button>
+                        <div class="mb-0 mt-4 text-center">
+                          <p
+                            class="link"
+                            id="forgotPasswordBtn"
+                            style="cursor: poi"
+                          >
+                            Forgot your password?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-3 pb-3">Sign Up</h4>
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-style"
+                            placeholder="Full Name"
+                            id="signupFullName"
+                          />
+                          <i class="input-icon uil uil-user"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="tel"
+                            class="form-style"
+                            placeholder="Phone Number"
+                            id="signupPhoneNumber"
+                          />
+                          <i class="input-icon uil uil-phone"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="email"
+                            class="form-style"
+                            placeholder="Email"
+                            id="signupEmail"
+                          />
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="password"
+                            class="form-style"
+                            placeholder="Password"
+                            id="signupPassword"
+                          />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="password"
+                            class="form-style"
+                            placeholder="Confirm Password"
+                            id="signupConfirmPassword"
+                          />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <div class="btn mt-4" id="signupBtn">Register</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="icon-text">Kitchen</div>
-            </div>
-            <div class="pool">
-              <div class="icon">
-                <img src="media/figma/swim-svgrepo-com.svg" alt="" />
-              </div>
-              <div class="icon-text">Pool</div>
-            </div>
-            <div class="wifi">
-              <div class="icon">
-                <img src="media/figma/wifi-svgrepo-com.svg" alt="" />
-              </div>
-              <div class="icon-text">Wifi</div>
-            </div>
-            <div class="gym">
-              <div class="icon">
-                <img src="media/figma/dumbbell-gym-svgrepo-com.svg" alt="" />
-              </div>
-              <div class="icon-text">Gym</div>
-            </div>
-            <div class="taxi">
-              <div class="icon">
-                <img src="media/figma/taxi-svgrepo-com.svg" alt="" />
-              </div>
-              <div class="icon-text">Taxi</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="rooms">
-        <div class="section-title">
-          <h2>Featured Rooms</h2>
-        </div>
-        <div class="rooms-center" id="rooms"></div>
-      </section>
-      <section class="section-info">
-        <div class="section-info-div">
-          <p>Get a room already!</p>
-          <a href="rooms.html"><button>Book Now</button></a>
-        </div>
-      </section>
-      <!-- modal -->
-      <div
-        class="modal fade"
-        id="roomModal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="roomModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="roomModalLabel">Room Details</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" id="roomModalBody">
-              <!-- Room details and reservation form will be dynamically added here -->
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn" id="confirmReservationBtn">
-                Confirm Reservation
-              </button>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- New modal for reservation success message -->
-      <div class="modal" id="successModal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Congratulations!</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body" id="successModalBody">
-              <!-- Content of the success message goes here -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <footer>
-        <div class="footer-container">
-          <div class="footer-left">
-            <div class="footer-logo">
-              <img src="media/figma/image 1.png" alt="" />
-            </div>
-            <div class="footer-address">
-              <span class="text-1">Bon Hotels Head Office</span><br />
-              <span class="footer-phone">+27 434 344 432</span><br />
-              <span class="footer-email">info@bonhotels.com</span>
-            </div>
-          </div>
-          <div class="footer-center">
-            <li>Our Hotels</li>
-            <li>Our Conferencing</li>
-            <li>Our Company</li>
-            <li>Hotel Design</li>
-            <li>Careers</li>
-          </div>
-          <div class="footer-right">
-            <p class="subscribe-text">Subscribe for Offers</p>
-            <div class="subscribe-input">
-              <input type="text" placeholder="Email Address" />
-            </div>
-            <div class="subscribe-button"><button>Subscribe Now</button></div>
-          </div>
-        </div>
-      </footer>
     </div>
-    <script>
-      function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-      }
-
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
-    </script>
     <script
       type="module"
       src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"
@@ -273,6 +161,6 @@
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
 
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/login.js"></script>
   </body>
 </html>
