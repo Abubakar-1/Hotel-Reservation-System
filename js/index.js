@@ -178,7 +178,7 @@ function createRoomCard(roomData) {
   roomDetails.innerHTML = `
   <div class="room-card-body">
     <h2 class="">${roomData.roomName}</h2>
-    <p>$${roomData.roomPrice}</p>
+    <p>₦${roomData.roomPrice}</p>
     <p>${roomData.roomType}</p>
     <p>${roomData.roomDescription}</p>
     </div
