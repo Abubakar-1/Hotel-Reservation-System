@@ -214,7 +214,7 @@ export function openRoomModal(reserveButton) {
   modalBody.innerHTML = `
       <p><strong>Room Name:</strong> ${roomData.roomName}</p>
       <p><strong>Room Description:</strong> ${roomData.roomDescription}</p>
-      <p><strong>Room Price:</strong> ${roomData.roomPrice}</p>
+      <p><strong>Room Price:</strong> ₦${roomData.roomPrice}</p>
 
       <!-- Add additional room details as needed -->
 
@@ -355,7 +355,7 @@ async function confirmReservation() {
           <p>Congratulations! You've successfully booked the ${selectedRoomName} room.</p> 
           <p>Date: ${checkInDate.toDateString()} to ${checkOutDate.toDateString()}</p>
           <p>Number of Users: ${numUsers}</p>
-          <p>Total Price: $${totalPrice}</p>
+          <p>Total Price: ₦${totalPrice}</p>
           <img src="${selectedRoomImage}" alt="${selectedRoomName}" style="max-width: 100%;">
         `;
       successModal.show();

@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <p class="card-text"></p>
           <!-- Additional Details -->
           <p>Status: ${reservation.status}</p>
-          <p>Total Price: $${totalPrice}</p>
+          <p>Total Price: ₦${totalPrice}</p>
           <p>Room Type: ${reservation.roomType}</p>
           ${
             reservation.status === "Canceled"
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p>Check-out: ${reservation.checkOutDate
                 .toDate()
                 .toDateString()}</p>
-              <p>Total Price: $${totalPrice}</p>
+              <p>Total Price: ₦${totalPrice}</p>
               <p>Status: ${reservation.status}
               <!-- Add more details as needed -->
             </div>
@@ -545,7 +545,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <p>Date: ${checkInDate.toDateString()} to ${checkOutDate.toDateString()}</p>
       <p>Number of Users: ${numUsers}</p>
       <img src="${selectedRoomImage}" alt="${selectedRoomName}" style="max-width: 100%;">
-      <p>Total Price: ${totalPrice}</p>
+      <p>Total Price: ₦${totalPrice}</p>
       `;
 
     const successModal = new bootstrap.Modal(
